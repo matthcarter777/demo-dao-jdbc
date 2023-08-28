@@ -50,6 +50,22 @@ public class Program {
 		sellerDao.insert(newSeller);
 		
 		System.out.println("Inserted! new Id: " + newSeller.getId());
+		
+		System.out.println();
+		System.out.println("=== Test 5: Seller findById ===");
+		
+		Seller sellerUpdate = sellerDao.findById(8);
+		System.out.println(sellerUpdate);
+		System.out.println();
+		
+		sellerUpdate.setName("Vegeta");
+		sellerDao.update(sellerUpdate);
+		
+		Seller sellerUpdated = sellerDao.findById(8);
+		
+		System.out.println(sellerUpdated);
+		
+		System.out.println();
 	}
 
 }
