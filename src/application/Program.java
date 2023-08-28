@@ -47,11 +47,11 @@ public class Program {
 		System.out.println();
 		System.out.println("=== Test 4: Seller insert ===");
 		
-		//Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00, department);
+		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00, department);
 		
-		//sellerDao.insert(newSeller);
+		sellerDao.insert(newSeller);
 		
-		//System.out.println("Inserted! new Id: " + newSeller.getId());
+		System.out.println("Inserted! new Id: " + newSeller.getId());
 		
 		System.out.println();
 		System.out.println("=== Test 5: Seller findById ===");
@@ -93,6 +93,16 @@ public class Program {
 		
 		Department findDepartment = departmentDao.findById(6);
 		System.out.println(findDepartment);
+		
+		System.out.println();
+		
+		System.out.println("=== Test 10: Department findAll ===");
+				
+		List<Department> allDepartment = departmentDao.findAll();
+		
+		for (Department obj: allDepartment) {
+			System.out.println(obj);
+		}
 		
 		
 		
